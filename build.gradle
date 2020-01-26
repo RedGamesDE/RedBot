@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+group 'de.redgames'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+shadowJar {
+    classifier null
+    manifest {
+        attributes (
+                'Main-Class': 'de.redgames.redbot.Bot'
+        )
+    }
+}
+
+dependencies {
+    implementation 'com.github.theholywaffle:teamspeak3-api:1.2.0'
+    implementation 'org.slf4j:slf4j-simple:1.7.25'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    testCompile 'junit:junit:4.12'
+}
