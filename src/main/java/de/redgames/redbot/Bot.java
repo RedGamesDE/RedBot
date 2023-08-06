@@ -67,18 +67,12 @@ public final class Bot extends Module {
             String command;
             while ((command = reader.readLine()) != null) {
                 switch (command.trim().toLowerCase()) {
-                    case "shutdown":
-                    case "exit":
-                    case "stop":
-                    case "quit":
-                        bot.shutdown();
-                        break;
-                    case "help":
-                    case "?":
+                    case "shutdown", "exit", "stop", "quit" -> bot.shutdown();
+                    case "help", "?" -> {
                         System.out.println("List of available commands:");
                         System.out.println("\thelp - Displays this message");
                         System.out.println("\tshutdown - Stops the bot");
-                        break;
+                    }
                 }
             }
         } catch (IOException e) {
