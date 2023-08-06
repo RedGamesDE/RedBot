@@ -5,5 +5,3 @@
 /.idea/
 *.iml
 /out/production/classes/
-/gradle/wrapper/gradle-wrapper.jar
-/config/

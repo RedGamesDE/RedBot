@@ -8,7 +8,6 @@ import de.redgames.redbot.channelmanager.ChannelManager;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.Paths;
 
 public final class Bot extends Module {
     private final Module[] modules = {
@@ -41,21 +40,19 @@ public final class Bot extends Module {
 
     public static Bot create() {
         Bot bot = new Bot();
-
-        Credentials credentials = bot.loadConfiguration(Paths.get("config", "credentials.json"),
-                Credentials.class, Credentials::new);
+        Credentials credentials = Credentials.fromEnvironment();
 
         TS3Config config = new TS3Config();
-        config.setHost(credentials.hostname);
-        config.setQueryPort(credentials.port);
+        config.setHost(credentials.hostname());
+        config.setQueryPort(credentials.port());
 //        config.setFloodRate(TS3Query.FloodRate.UNLIMITED);
 
         TS3Query query = new TS3Query(config);
         query.connect();
 
         TS3Api api = query.getApi();
-        api.login(credentials.username, credentials.password);
-        api.selectVirtualServerById(credentials.virtualServer);
+        api.login(credentials.username(), credentials.password());
+        api.selectVirtualServerById(credentials.virtualServer());
 
         bot.enable(bot, query, api, query.getAsyncApi());
 

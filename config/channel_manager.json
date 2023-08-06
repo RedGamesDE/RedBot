@@ -1,0 +1,11 @@
+{
+  "pollDelay": 1000,
+  "channels": [
+    "Support% |1|%",
+    "Team Talk% |1|%",
+    "Talk |1|",
+    "Talk für 2 [|I|]",
+    "Talk für 3 [|I|]",
+    "Talk für 4 [|I|]"
+  ]
+}
