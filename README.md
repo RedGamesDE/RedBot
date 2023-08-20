@@ -1,2 +1,2 @@
 # RedBot
-The RedGames TeamSpeak 3 server bot
+The SlimeNexus TeamSpeak 3 server bot

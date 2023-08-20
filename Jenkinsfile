@@ -10,9 +10,9 @@ pipeline {
             steps {
                 withGradle {
                     withCredentials([usernamePassword(
-                        credentialsId: '5e8ae1b1-eead-4cda-8314-add11af4e44f',
-                        usernameVariable: 'REDGAMES_REGISTRY_USERNAME',
-                        passwordVariable: 'REDGAMES_REGISTRY_PASSWORD'
+                        credentialsId: 'slimenexus-repo-minetown',
+                        usernameVariable: 'SLIME_NEXUS_REGISTRY_USERNAME',
+                        passwordVariable: 'SLIME_NEXUS_REGISTRY_PASSWORD'
                     )]) {
                         gradlew("dockerPushImage")
                     }

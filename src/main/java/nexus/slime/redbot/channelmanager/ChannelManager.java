@@ -1,8 +1,8 @@
-package de.redgames.redbot.channelmanager;
+package nexus.slime.redbot.channelmanager;
 
 import com.github.theholywaffle.teamspeak3.api.ChannelProperty;
 import com.github.theholywaffle.teamspeak3.api.wrapper.Channel;
-import de.redgames.redbot.Module;
+import nexus.slime.redbot.Module;
 
 import java.nio.file.Paths;
 import java.util.*;

@@ -1,4 +1,4 @@
-package de.redgames.redbot.channelmanager;
+package nexus.slime.redbot.channelmanager;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package de.redgames.redbot;
+package nexus.slime.redbot;
 
 public record Credentials(
         String hostname,

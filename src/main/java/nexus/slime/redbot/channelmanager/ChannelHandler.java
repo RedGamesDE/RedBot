@@ -1,6 +1,6 @@
-package de.redgames.redbot.channelmanager;
+package nexus.slime.redbot.channelmanager;
 
-import de.redgames.redbot.channelmanager.number.ChannelNumberFormat;
+import nexus.slime.redbot.channelmanager.number.ChannelNumberFormat;
 
 import java.io.IOError;
 import java.io.IOException;

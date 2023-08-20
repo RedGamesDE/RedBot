@@ -1,4 +1,4 @@
-package de.redgames.redbot.channelmanager.number;
+package nexus.slime.redbot.channelmanager.number;
 
 public final class RomanNumberFormat {
     private static final int[] NUMBER_VALUES = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };

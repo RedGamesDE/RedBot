@@ -1,9 +1,9 @@
-package de.redgames.redbot;
+package nexus.slime.redbot;
 
 import com.github.theholywaffle.teamspeak3.TS3Api;
 import com.github.theholywaffle.teamspeak3.TS3Config;
 import com.github.theholywaffle.teamspeak3.TS3Query;
-import de.redgames.redbot.channelmanager.ChannelManager;
+import nexus.slime.redbot.channelmanager.ChannelManager;
 
 import java.io.BufferedReader;
 import java.io.IOException;

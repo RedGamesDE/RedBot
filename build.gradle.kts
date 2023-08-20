@@ -4,8 +4,8 @@ plugins {
     id("com.bmuschko.docker-java-application") version "9.3.2"
 }
 
-group = "de.redgames"
-version = "1.1"
+group = "nexus.slime"
+version = "1.2"
 
 repositories {
     mavenCentral()
@@ -20,25 +20,25 @@ dependencies {
 docker {
     javaApplication {
         baseImage = "eclipse-temurin:17-jre"
-        maintainer = "RedGames"
+        maintainer = "Slime Nexus"
         ports = emptyList()
         images = setOf(
-            "registry.redgames.de/redbot:$version",
-            "registry.redgames.de/redbot:latest"
+            "registry.slime.nexus/redbot:$version",
+            "registry.slime.nexus/redbot:latest"
         )
     }
 
     registryCredentials {
-        url = "https://registry.redgames.de/"
-        username = providers.environmentVariable("REDGAMES_REGISTRY_USERNAME")
-        password = providers.environmentVariable("REDGAMES_REGISTRY_PASSWORD")
+        url = "https://registry.slime.nexus/"
+        username = providers.environmentVariable("SLIME_NEXUS_REGISTRY_USERNAME")
+        password = providers.environmentVariable("SLIME_NEXUS_REGISTRY_PASSWORD")
     }
 }
 
 tasks {
     jar {
         manifest {
-            attributes("Main-Class" to "de.redgames.redbot.Bot")
+            attributes("Main-Class" to "nexus.slime.redbot.Bot")
         }
     }
 

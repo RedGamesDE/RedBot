@@ -1,4 +1,4 @@
-package de.redgames.redbot;
+package nexus.slime.redbot;
 
 import com.github.theholywaffle.teamspeak3.TS3Api;
 import com.github.theholywaffle.teamspeak3.TS3ApiAsync;

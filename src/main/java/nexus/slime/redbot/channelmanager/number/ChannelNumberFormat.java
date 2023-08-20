@@ -1,4 +1,4 @@
-package de.redgames.redbot.channelmanager.number;
+package nexus.slime.redbot.channelmanager.number;
 
 public enum ChannelNumberFormat {
     DECIMAL("|1|", Integer::toString, c -> {
